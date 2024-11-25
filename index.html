@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <style>
+      * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 2.5rem; 
+      background-color: #252020;
+      color: #fff;
+      
+      font-size: 1.2rem; 
+    }
+
+    .header .logo {
+      font-size: 2rem; 
+      font-weight: bold;
+      color: #e8eef7;
+      text-shadow: #f4f4f4;
+    }
+
+    .header .nav {
+      display: flex;
+      align-items: center;
+      align-content: center;
+    }
+
+    .nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    .nav ul li {
+      margin-left: 1.5rem; 
+    }
+
+    .nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.2rem; 
+    }
+
+    .nav ul li a:hover {
+      text-decoration:solid;
+      background: #4caf50;
+      padding: 0.7rem 1rem;
+      border-radius: 20px;
+    }
+
+    .nav .join {
+      background: #4caf50;
+      padding: 0.7rem 1.2rem;
+      border-radius: 20px;
+      
+    }
+
+    .nav .join:hover {
+      background: #45a049;
+    }
+
+  
+    .nav .search-container {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      flex-grow: 1;
+      max-width: 600px; 
+    }
+
+    .nav .search-container input {
+      width: 60%;
+      padding: 1rem 1rem 1rem 1rem;
+      border: 1px solid #ccc;
+      border-radius: 30px;
+      font-size: 1.2rem; 
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+
+    .nav .search-container button {
+      padding: 1rem 1.8rem;
+      margin-left: 10px; 
+      border: 1px solid #4caf50;
+      background-color: #4caf50;
+      color: white;
+      border-radius: 30px;
+      cursor: pointer;
+     
+    }
+
+    .nav .search-container button:hover {
+      background-color: #45a049;
+    }
+
+    .nav .search-container input:focus {
+      border-color: #4caf50;
+    }
+    
+
+    </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">TASKS</div>
+    <nav class="nav">
+      <ul>
+      <li><a href="./table.html">Table</a></li>
+      <li><a href="./cv.html">CV</a></li>
+      <li><a href="./wikipedia.html">Wikipedia</a></li>
+      <li><a href="./dash.html">Dashboard</a></li>
+      <li><a href="./blog.html">Blogs</a></li>
+      <li><a href="./pexel.html">Pexel</a></li>
+      </ul>
+      <div class="search-container" id="navSearchBar">
+        <input type="text" placeholder="Search for free photos">
+        <button>Search</button>
+      </div>
+      
+    </nav>
+  </header>
+
+  
+</body>
+</html>
