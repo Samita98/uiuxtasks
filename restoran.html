@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restoran</title>
+ <style>
+   
+body{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  background-color: #f8f9fa;
+  height: 100%;
+}
+
+.hero-section {
+  color: #fff;
+  position: relative;
+  height: 100%;
+  min-height: 500px;
+  background: linear-gradient(rgba(17, 25, 46, 0.1), rgba(15, 23, 43, .1)), url(./images/bg-hero.jpg);
+  background-position: center center;
+  background-repeat: no-repeat; 
+    
+}
+.overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%; 
+      height: 100%;
+      z-index: 1;
+    }
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  position: sticky;
+  top: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000; 
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: orange;
+}
+.logo img {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+      
+    }
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+}
+.nav-links a:hover {
+      color: #f8a94b;
+    }
+.nav-links .btn:hover {
+      /* background-color: #d98028; */
+      background: orange;
+    }
+.nav-links .btn {
+  background: orange;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+.nav-links .btn:hover {
+      background-color: #d98028;
+      /* background: orange; */
+    }
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  max-width: 500px;
+  z-index: 2;
+  color: #fff;
+  box-sizing: content-box;
+  display: block;
+  border-radius: 50%;
+  
+   
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+.hero-content .btn {
+  /* display: inline-block; */
+  padding: 0.75rem 1.5rem;
+  background: orange;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.hero-content .btn:hover {
+  /* background: orange; */
+  background-color: #d98028;
+}
+
+.center-image {
+      position: absolute;
+      top: 50%;
+      right: 10%;
+      transform: translateY(-50%);
+      z-index: 3;
+      border-radius: 10px;
+      width: 400px;
+      height: auto;
+      animation: rotateImage 20s linear infinite;
+    }
+
+    @keyframes rotateImage {
+      0% {
+        transform: translateY(-50%) rotate(0deg);
+      }
+      100% {
+        transform: translateY(-50%) rotate(360deg);
+      }
+    }
+.features {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 50px;
+      padding: 40px;
+      background-color: #f8f9fa;
+    }
+
+    .feature-item {
+      text-align: center;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 22%;
+    }
+
+    .feature-item img {
+      width: 50px;
+      margin-bottom: 20px;
+    }
+
+    .feature-item h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .feature-item p {
+      font-size: 0.9rem;
+      color: #666;
+      text-align: justify;
+    }
+
+
+    .about-us {
+      padding: 60px 40px;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    .about-us h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .about-us p {
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 30px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .about-us img {
+      width: 100px;
+      margin-top: 20px;
+    }
+    .about-us {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 60px 40px;
+        background-color: #fff;
+        font-family: "Nunito", sans-serif;
+      }
+  
+      .about-us .text {
+        flex: 1;
+        padding-left: 20px;
+        text-align: left;
+        /* color:#f8a94b; */
+        color: orange;
+      }
+  
+      .about-us h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+  
+      .about-us p {
+        font-size: 1rem;
+        color: #666;
+        margin-bottom: 30px;
+        margin-left: 0;
+        text-align: justify;
+        max-width: 500px;
+      }
+  
+      .about-us .image-container {
+        flex: 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+      }
+  
+      .about-us .image-container img {
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+ </style>
+</head>
+<body>
+  <div header class="hero-section">
+    <div class="overlay"></div>
+    <nav class="navbar">
+      <div class="logo"> <img src="https://img.icons8.com/ios-filled/50/f8a94b/restaurant.png" alt="Logo Icon">
+        <span>RESTORAN</span></div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#" class="btn">Book a Table</a></li>
+      </ul>
+    </nav>
+    <div class="hero-content">
+      <h1>Enjoy Our <br> Delicious Meal</h1>
+      <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.Enjoy a mouthwatering steak experience that’ll keep you coming back for more.</p>
+      <a href="#" class="btn">Book a Table</a>
+    </div>
+    <div class="hero-image">
+        <img src="./images/hero.png" alt="Delicious Meal" class="center-image" >
+    </div>
+  </div>
+
+  <div class="features">
+    <div class="feature-item">
+      <img src="https://img.icons8.com/ios-filled/50/f8a94b/chef-hat.png" alt="Master Chefs">
+      <h3>Master Chefs</h3>
+      <p>At Stakehouse, our steaks are crafted by expert chefs who bring years of experience to your plate. Every cut is prepared with precision, ensuring a dining experience like no other.</p>
+    </div>
+    <div class="feature-item">
+      <img src="https://img.icons8.com/ios-filled/50/f8a94b/food.png" alt="Quality Food">
+      <h3>Quality Food</h3>
+      <p>Craving a delicious steak? Ordering from Stakehouse is simple! Browse our menu online, select your favorites, and have them delivered straight to your door. The best in steak is now just a few clicks away.</p>
+    </div>
+    <div class="feature-item">
+      <img src="https://img.icons8.com/ios-filled/50/f8a94b/shopping-cart.png" alt="Online Order">
+      <h3>Online Order</h3>
+      <p>Ordering from Stakehouse is simple! Browse our menu online,  The best in steak is now just a few clicks away.</p>
+    </div>
+    <div class="feature-item">
+        <img src="https://img.icons8.com/ios-filled/50/f8a94b/customer-support.png" alt="24/7 Service Icon">
+      <h3>24/7 Service</h3>
+      <p>Hungry at any hour? Stakehouse is here for you! With our 24/7service, you can enjoy a perfectly grilled steak whenever you choose. No matter the time, we're ready to serve you.</p>
+    </div>
+    
+  </div>
+  <div id="about-us" class="about-us">
+    <div class="text">
+      <h2>About Us</h2>
+      <p>At Stakehouse, we are passionate about providing an unforgettable dining experience. Our chefs work tirelessly to bring you the finest cuts of steak, prepared with care and precision. Whether you dine with us or order online, we strive to deliver the best steak in town every single time. Join us today and experience the true art of steak grilling!</p>
+      <p>We source the best ingredients, serve our meals with love, and believe in creating memories over meals. Let us take you on a culinary journey where every bite is a celebration of flavor and passion.</p>
+    </div>
+    <div class="image-container">
+      <img src="./images/872502a1307eb06df18fc953d54ab77c.avif" alt="Steak Image 1">
+      <img src="./images/souk madinat.jpg" alt="Chef Hat Image">
+      <img src="./images/city-grill.jpg" alt="Food Image">
+      <img src="./images/the-city-grill-best.jpg" alt="Shopping Cart Image">
+    </div>
+  </div>
+</div>
+</body>
+</html>
